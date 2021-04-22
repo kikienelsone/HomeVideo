@@ -1,0 +1,81 @@
+public class Person {
+    public static void main(String[] args) {
+        Man ira = new Man("Ирина", 75,null,null);
+        Man kostya = new  Man ("Константин", 85,null,null);
+        Man vitya = new Man("Виктор", 90, null, null);
+        Man katya = new Man("Катя", 70, null, null);
+        Man oleg = new Man("Олег",45, ira, kostya);
+        Man olga = new Man("Ольга",47,katya, vitya);
+        Man igor = new Man("Игорь", 20,olga,oleg);
+
+        igor.getInfo();
+    }
+}
+// У человека не может быть более 100 едениц здоровья
+class Man {
+    private String name;
+    private int age;
+    private int hp;
+    private Man mother;
+    private Man father;
+
+    public Man getMother() {
+        return mother;
+    }
+
+    public Man getFather() {
+        return father;
+    }
+
+    public Man(String name, int age, Man mother, Man father) {
+        this.name = name;
+        this.age = age;
+        this.hp = 100;
+        this.mother = mother;
+        this.father = father;
+
+    }
+
+    void setHp(int hp) {
+        if (this.hp + hp >= 100) this.hp = 100;
+        else this.hp += hp;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    int getHp() {
+        return this.hp;
+    }
+
+    public void getInfo() {
+        String info = "";
+        info += "Меня зовут " + this.name + "\n" +
+                "Мне " + this.age + " лет \n";
+        if (this.mother != null) {
+            info += "Мою маму зовут " + this.mother.name + "\n";
+            if (this.mother.mother != null)
+                info += "Бабушку по маминой линии зовут " + this.mother.mother.name + "\n";
+            if (this.mother.father !=null)
+                info+="Дедушку по мамино линии зовут "+this.mother.father.name+"\n";
+            if(this.father.mother !=null)
+                info+="Бабушку по папиной линии зовут "+this.father.mother.name+"\n";
+            if (this.father.father !=null)info+="Дедушку по папиной линии зовут "+this.father.father.name+"\n";
+        }
+        if (this.father != null) info += "Моего папу зовут " + this.father.name + "\n";
+        System.out.println(info);
+    }
+}

@@ -1,0 +1,53 @@
+package server;
+
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.ArrayList;
+
+public class Server {
+    public static void main(String[] args) { // main thread
+        ArrayList<User> users = new ArrayList<>();   //user`s collection
+
+        try {
+                ServerSocket serverSocket = new ServerSocket(8188);
+                System.out.println("server run");
+            int i = 0;
+                while (true){
+                    Socket socket = serverSocket.accept(); // the socket for clients is open//waiting for clients
+                    System.out.println("client " + (i++)+ " in");
+                    Thread thread = new Thread(new Runnable() {    // the thread for new clients
+                        @Override
+                        public void run() {
+                            try {
+                                DataOutputStream out = new DataOutputStream(socket.getOutputStream());// send message to client
+                                DataInputStream in = new DataInputStream(socket.getInputStream());
+                                out.writeUTF("enter your name: ");
+                                String userName = in.readUTF();
+                                users.add(new User(userName, socket));
+                                out.writeUTF(userName + "!" + " welcome to server");
+                                while (true) {
+                                    String request = in.readUTF(); // waiting a message from client
+                                    System.out.println(userName+ ":"+ request);
+                                    for (User user : users){
+
+                                        user.sendMessage(userName+" "+ request);
+                                    }
+
+                                }
+                            }catch (Exception e){
+                                System.out.println("client go away");
+                            }
+                        }
+                    });
+                    thread.start();
+                    }
+        } catch (Exception e) {
+                System.out.println("something go wrong(");
+            }
+        }
+
+    }
+

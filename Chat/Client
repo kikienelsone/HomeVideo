@@ -9,21 +9,35 @@ import java.util.Scanner;
 public class Client {
     public static void main(String[] args) {
         try {
-            Socket socket = new Socket("46.39.45.59",8188);
+            Socket socket = new Socket("192.168.1.10", 8188);
             DataInputStream in = new DataInputStream(socket.getInputStream());
             DataOutputStream out = new DataOutputStream(socket.getOutputStream());
-            while (true){
+            Thread thread = new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    while (true){
+                        String response = null;   //read response from server
+                        try {
+                            response = in.readUTF();
+                            System.out.println(response);
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
 
-                String response = in.readUTF();//читаем ответ сервера
-                System.out.println(response);
+                    }
+
+                }
+            });
+            thread.start();
+            while (true){
                 Scanner scanner = new Scanner(System.in);
-                String request = scanner.next();
-                out.writeUTF(request);//отправляем сообщение серверу
+                String request = scanner.nextLine();
+                out.writeUTF(request);   //send message to server
             }
+
         } catch (IOException e) {
-            System.out.println("не могу подключиться к серверу");
+            System.out.println("connect not happens");
         }
 
     }
-
 }

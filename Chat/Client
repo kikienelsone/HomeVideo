@@ -16,7 +16,7 @@ public class Client {
                 @Override
                 public void run() {
                     while (true){
-                        String response = null;   //read response from server
+                        String response = "";   //read response from server
                         try {
                             response = in.readUTF();
                             System.out.println(response);

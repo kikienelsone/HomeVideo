@@ -18,7 +18,7 @@
             <TitledPane prefHeight="98.0" prefWidth="411.0" />
             <TextArea fx:id="testArea" editable="false" prefHeight="272.0" prefWidth="430.0" />
             <TextField fx:id="textField" onAction="#send" prefHeight="93.0" prefWidth="430.0" />
-            <Button mnemonicParsing="false" onAction="#send" prefHeight="25.0" prefWidth="431.0" text="Send" />
+            <Button mnemonicParsing="false" <!--onAction="#send"--> prefHeight="25.0" prefWidth="431.0" text="Send" />
          </children>
       </VBox>
       <VBox prefHeight="428.0" prefWidth="187.0">

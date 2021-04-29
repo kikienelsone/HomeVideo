@@ -28,7 +28,8 @@
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="304.0" prefWidth="158.0">
                      <children>
-                        <TextField fx:id="textFieldCollection" layoutX="2.0" prefHeight="288.0" prefWidth="147.0" />
+                         <ListView prefHeight="Infinity" prefWidth="Infinity" />
+                       <!-- <TextField fx:id="textFieldCollection" editable="false" layoutX="-4.0" prefHeight="288.0" prefWidth="153.0" />-->
                      </children>
                   </AnchorPane>
               </content>

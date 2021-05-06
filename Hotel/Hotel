@@ -1,0 +1,73 @@
+package Hotel;
+
+public class Hotel {
+    public static void main(String[] args) {
+
+    }
+    Room[] freeRooms;
+    int[] usedRooms;
+    public Hotel(Room[] rooms) {
+        this.freeRooms = rooms;
+        this.usedRooms = new int[rooms.length];
+    }
+    void getFreeRooms(){
+        Room[] rooms = this.freeRooms;
+        System.out.println("a free rooms`s list");
+        for (int i = 0; i < rooms.length; i++) {
+            if (rooms[i].roomNumber==0)
+                continue;
+            System.out.println("room #"+rooms[i].roomNumber);
+
+        }
+        System.out.println("the list`s end");
+
+
+    }
+    void getUsedRooms(){
+        int[] rooms = this.usedRooms;
+        System.out.println("a used rooms`s list");
+        for (int i = 0; i <rooms.length; i++) {
+            if (rooms[i] ==0){
+                continue;
+            }
+            System.out.println("room #"+rooms[i]);
+
+        }
+        System.out.println("the list`s end");
+
+    }
+    void reservedRoom(int needRoom) {
+        Room[] freeRooms = this.freeRooms;
+        for (int i = 0; i < freeRooms.length; i++) {
+            if (needRoom == freeRooms[i].roomNumber) {
+                freeRooms[i].roomNumber = 0;
+                this.usedRooms[i] = needRoom;
+                System.out.println("room #" + needRoom + " is free");
+                break;
+
+            }else if (i+1 == freeRooms.length ){
+                System.out.println("no room");
+            }
+
+        }
+
+    }
+    void getRoomWithEat(){
+        Room[] rooms = this.freeRooms;
+        for (int i = 0; i < rooms.length; i++) {
+            if(rooms[i].eat && rooms[i].roomNumber !=0) {
+                System.out.println("room with eat " + rooms[i].roomNumber);
+            }
+        }
+    }
+    void getRoomWithWife(){
+        Room[] rooms = this.freeRooms;
+        for (int i = 0; i < rooms.length; i++) {
+            if (rooms[i].wifi && rooms[i].roomNumber !=0){
+                System.out.println("room with wife"+rooms[i].roomNumber);
+            }
+
+        }
+    }
+
+}

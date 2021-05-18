@@ -36,7 +36,22 @@ public class Controller {
             socket = new Socket("213.139.209.109",8188);
             DataInputStream in = new DataInputStream(socket.getInputStream());
             out = new DataOutputStream(socket.getOutputStream());
-           
+            Thread thread = new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    while (true){
+                        String response = null; // read response from server
+                        try {
+                            response = in.readUTF();
+                            textArea.appendText(response+"\n");
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+
+                }
+            });
+            thread.start();
         } catch (IOException e) {
             e.printStackTrace();
         }

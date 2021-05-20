@@ -8,52 +8,73 @@ import java.net.Socket;
 import java.util.ArrayList;
 
 public class Server {
+    static ArrayList<User> users = new ArrayList<>();   //user`s collection
     public static void main(String[] args) { // main thread
-        ArrayList<User> users = new ArrayList<>();   //user`s collection
 
         try {
-                ServerSocket serverSocket = new ServerSocket(8188);
-                System.out.println("server run");
-            int i = 0;
-                while (true){
-                    Socket socket = serverSocket.accept(); // the socket for clients is open//waiting for clients
-                    System.out.println("client " + (i++)+ " in");
-                    Thread thread = new Thread(new Runnable() {    // the thread for new clients
-                        @Override
-                        public void run() {
-                            User user = new User("visitor", socket);
+            ServerSocket serverSocket = new ServerSocket(8188);
+            System.out.println("server run");
+            while (true){
+                Socket socket = serverSocket.accept(); // the socket for clients is open//awaiting for clients
+                System.out.println("client in");
+                DataOutputStream out = new DataOutputStream(socket.getOutputStream());// send message to client
+                DataInputStream in = new DataInputStream(socket.getInputStream());
+                out.writeUTF("enter your name: ");
+                String userName = in.readUTF();
+                User user = new User(userName, socket);
+                users.add(user);
+                sendUserList();
+                out.writeUTF(userName + "!" + " welcome to server");
+                Thread thread = new Thread(new Runnable() {    // the thread for new clients
+                    @Override
+                    public void run() {
+                        try {
+                           /* user.setUserName(userName);*/
+                            while (true) {
+                                String request = in.readUTF(); // awaiting a message from client
+                                System.out.println(userName+ ":"+ request);
+                                for (User userNew : users)/*{
+                                    if (userNew.getUuid().equals(user.getUuid())){
+                                        continue;
+                                    }else
+                                        userNew.sendMessage(userName+ ": "+request);
+                                }*/
+                                    userNew.sendMessage(userName+": "+request);
+                            }
+                        }catch (Exception e){
+                            System.out.println("client " + user.getUserName() +" off");
+                        }
+                            users.remove(user);
+                        for (User user: users) {
                             try {
-                                DataOutputStream out = new DataOutputStream(socket.getOutputStream());// send message to client
-                                DataInputStream in = new DataInputStream(socket.getInputStream());
-                                out.writeUTF("enter your name: ");
-                                String userName = in.readUTF();
-                                user.setUserName(userName);
-                                users.add(user);
-                                out.writeUTF(userName + "!" + " welcome to server");
-                                while (true) {
-                                    String request = in.readUTF(); // waiting a message from client
-                                    System.out.println(userName+ ":"+ request);
-                                    for (User userNew : users){
-                                        if (userNew.getUuid().equals(user.getUuid())){
-                                            continue;
-                                        }else
-                                            userNew.sendMessage(userName+ ": "+request);
-                                    }
-                                }
-                            }catch (Exception e){
-                                System.out.println("client " + user.getUserName() +" off");
-                            }finally {
-                                users.remove(user);
+                                DataOutputStream out = new DataOutputStream(user.getSocket().getOutputStream());
+                                out.writeUTF(user.getUserName()+"off");
+                            } catch (IOException e) {
+                                e.printStackTrace();
                             }
                         }
-                    });
-                    thread.start();
+                        sendUserList();
                     }
-        } catch (Exception e) {
-                System.out.println("something go wrong(");
+                });
+                thread.start();
+            }
+        }catch (Exception e) {
+            System.out.println("something go wrong(");
+        }
+    }
+    private static void sendUserList(){
+        String usersName = "UserList";
+        for (User user:users) {
+            usersName += "//"+user.getUserName(); //userList//user1//user2//user3
+        }
+        for (User user:users) {
+            try {
+                DataOutputStream out = new DataOutputStream(user.getSocket().getOutputStream());
+                out.writeUTF(usersName);
+            } catch (IOException e) {
+                e.printStackTrace();
             }
         }
-
     }
 
-
+}

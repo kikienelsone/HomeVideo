@@ -63,7 +63,7 @@ public class Server {
         }
     }
     private static void sendUserList(){
-        String usersName = "UserList";
+        String usersName = "~UserList~";
         for (User user:users) {
             usersName += "//"+user.getUserName(); //userList//user1//user2//user3
         }

@@ -1,0 +1,11 @@
+package homeWork;
+
+public class Triangle extends GeometricalFigure{
+    public Triangle(){
+
+    }
+    public Triangle(int height, int lenght) {
+
+        super(height, lenght);
+    }
+}

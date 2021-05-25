@@ -1,0 +1,27 @@
+package homeWork;
+
+public class Main {
+    public static void main(String[] args) {
+        Circle circle = new Circle();
+
+            circle.setRadius(13);
+
+       Square square = new Square();
+
+            square.setLength(5);
+            square.setHeight(9);
+
+       Triangle triangle = new Triangle();
+
+            triangle.setLength(8);
+            triangle.setHeight(7);
+            triangle.getInfo();
+
+       Rectagle rectagle = new Rectagle();
+
+            rectagle.setLength(3);
+            rectagle.setHeight(6);
+            rectagle.getInfo();
+    }
+
+}

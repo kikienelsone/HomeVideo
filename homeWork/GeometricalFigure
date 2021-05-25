@@ -1,0 +1,38 @@
+package homeWork;
+
+public class GeometricalFigure {
+    private int height;
+    private int length;
+
+    public GeometricalFigure() {
+
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public int getLength() {
+        return length;
+    }
+
+    public void setLength(int length) {
+        this.length = length;
+    }
+
+    public GeometricalFigure(int height, int length) {
+        this.height = height;
+        this.length = length;
+    }
+
+    public void getInfo(){
+        System.out.println(this.height+this.length +" is sum of length & height");
+    }
+
+}
+
+

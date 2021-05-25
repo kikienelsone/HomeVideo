@@ -1,0 +1,16 @@
+package homeWork;
+
+public class Square extends GeometricalFigure{
+    public Square(){
+
+    }
+
+    public Square(int height, int lenght) {
+
+        super(height, lenght);
+    }
+
+
+    }
+
+

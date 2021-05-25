@@ -1,0 +1,12 @@
+package homeWork;
+
+public class Rectagle extends GeometricalFigure{
+    public Rectagle(){
+
+    }
+
+    public Rectagle(int height, int lenght) {
+
+        super(height, lenght);
+    }
+}

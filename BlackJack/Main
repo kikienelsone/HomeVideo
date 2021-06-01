@@ -1,4 +1,4 @@
-package blackjack;
+package blackJack;
 
 public class Main {
     public static void main(String[] args) {
@@ -8,7 +8,14 @@ public class Main {
         Diler diler = new Diler();
 
         Game game = new Game();
+        game.addPlayerToGame(player);
+        game.addPlayerToGame(diler);
+
+        game.addTwoCardsToPlayers();
 
 
+        game.addCardsTillNeed(player);
+        game.addCardsTillNeed(diler);
+        game.printWinner(player, diler);
     }
 }

@@ -1,4 +1,4 @@
-package blackjack;
+package blackJack;
 
 public class Card {
     private String name;

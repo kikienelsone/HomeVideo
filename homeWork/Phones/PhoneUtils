@@ -1,0 +1,26 @@
+package homeWork;
+
+import java.util.ArrayList;
+
+public class PhoneUtils extends Phone {
+
+    public PhoneUtils() {
+    }
+
+    public PhoneUtils(double diagonal, String processor, int cores, String name, String brand) {
+        super(diagonal, processor, cores, name, brand);
+    }
+
+    public static void printAllPhonesByProduction(ArrayList<Phone> phones, String brand) {
+
+
+    }
+
+    public static void printTheBiggestDiagonal(ArrayList<Phone> phones) {
+
+
+
+    }
+}
+
+

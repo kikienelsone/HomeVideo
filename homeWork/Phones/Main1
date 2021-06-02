@@ -30,7 +30,10 @@ public class Main1 {
         phones.add(phone8);
         phones.add(phone9);
 
-    }
+     /*   PhoneUtils.printAllPhonesByProduction(phones, "Apple");*/
+     /*   PhoneUtils.printTheBiggestDiagonal(phones);*/
+        PhoneUtils.printTheLeastDiagonal(phones);
 
+    }
 
 }

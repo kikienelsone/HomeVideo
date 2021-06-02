@@ -2,13 +2,13 @@ package homeWork;
 
 public class Phone {
 
-   private double diagonal;
-   private String processor;
-   private int cores;
-   private String name;
-   private String brand;
+    private double diagonal;
+    private String processor;
+    private int cores;
+    private String name;
+    private String brand;
 
-    public Phone() {
+    public Phone(Phone p) {
     }
 
     public Phone(double diagonal, String processor, int cores, String name, String brand) {
@@ -17,59 +17,53 @@ public class Phone {
         this.cores = cores;
         this.name = name;
         this.brand = brand;
+
+
     }
 
     public double getDiagonal() {
-
         return diagonal;
     }
 
     public void setDiagonal(double diagonal) {
-
         this.diagonal = diagonal;
     }
 
     public String getProcessor() {
-
         return processor;
     }
 
     public void setProcessor(String processor) {
-
         this.processor = processor;
     }
 
     public int getCores() {
-
         return cores;
     }
 
     public void setCores(int cores) {
-
         this.cores = cores;
     }
 
     public String getName() {
-
         return name;
     }
 
     public void setName(String name) {
-
         this.name = name;
     }
 
     public String getBrand() {
-
         return brand;
     }
 
     public void setBrand(String brand) {
-
         this.brand = brand;
     }
 
-
+    @Override
+    public String toString() {
+        return brand+" "+name+" "+cores+" cores"+" diagonal "+diagonal;
+    }
 }
-
 

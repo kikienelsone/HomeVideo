@@ -2,25 +2,50 @@ package homeWork;
 
 import java.util.ArrayList;
 
-public class PhoneUtils extends Phone {
+public class PhoneUtils {
 
-    public PhoneUtils() {
-    }
-
-    public PhoneUtils(double diagonal, String processor, int cores, String name, String brand) {
-        super(diagonal, processor, cores, name, brand);
-    }
 
     public static void printAllPhonesByProduction(ArrayList<Phone> phones, String brand) {
-
-
+        for (Phone p : phones) { // проходим циклом по всей коллекции
+            if (p.getBrand().equals(brand)) { // переменная "р" у типа Phone вызывает в себе созданный метод getBrand и сравнивает его с необходимым параметром
+                System.out.println(p);
+            }
+        }
     }
+
 
     public static void printTheBiggestDiagonal(ArrayList<Phone> phones) {
-
-
-
+        Phone theBiggestPhone = phones.get(0);    // создаем обьект типа Phone и из коллекции берем самый первый обьект с которым потом будем сравнивать все остальные
+        for (Phone p : phones) {  // цикл пройдет по всей коллекции и будет сравнивать параметры
+            if (p.getDiagonal() > theBiggestPhone.getDiagonal()) { // переменная р будет принимать на себя каждый из параметров и сравнивать их с "theBiggestPhone" пока выполняется условие сравнения
+                theBiggestPhone = p;
+            }
+        }
+        System.out.println(theBiggestPhone);
     }
+
+    public static void printTheLeastDiagonal(ArrayList<Phone> phones) {
+        Phone theLeastPhone = phones.get(0);
+        for (Phone p : phones) {
+            if (p.getDiagonal() < theLeastPhone.getDiagonal()) {
+                theLeastPhone = p;
+            }
+        }
+        System.out.println(theLeastPhone);
+    }
+
+    public static void printArithmeticalMean(ArrayList<Phone> phones) {
+        Phone mean = phones.get(0);
+       for (Phone p : phones) {
+           mean.getDiagonal() = mean.getDiagonal() + p.getDiagonal();
+       }
+        System.out.println(mean.getDiagonal()/phones.size());
+    }
+
 }
+
+
+
+
 
 

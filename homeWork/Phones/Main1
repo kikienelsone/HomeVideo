@@ -9,6 +9,7 @@ public class Main1 {
 
 
         Phone phone = new Phone(6.1, "A14 Bionic", 8, "Iphone12", "Apple");
+        Phone phone11 = new Phone(6.1, "A14 Bionic", 8, "Iphone12", "Apple");
         Phone phone1 = new Phone(6.5, "Exynos 2100", 7, "Galaxy A02", "Samsung");
         Phone phone2 = new Phone(6.7, "Qualcomm Snapdragon 888", 4, "ROG Phone 5", "Asus");
         Phone phone3 = new Phone(6.3, "MediaTek Dimensity 800", 6, "BL6000 Pro", "Blackview");
@@ -30,9 +31,17 @@ public class Main1 {
         phones.add(phone8);
         phones.add(phone9);
 
+
+
+
      /*   PhoneUtils.printAllPhonesByProduction(phones, "Apple");*/
      /*   PhoneUtils.printTheBiggestDiagonal(phones);*/
-        PhoneUtils.printTheLeastDiagonal(phones);
+       /* PhoneUtils.printTheLeastDiagonal(phones);*/
+
+
+
+
+
 
     }
 

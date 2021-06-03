@@ -1,6 +1,7 @@
 package homeWork;
 
 import java.util.ArrayList;
+import java.util.stream.Stream;
 
 public class PhoneUtils {
 
@@ -34,13 +35,14 @@ public class PhoneUtils {
         System.out.println(theLeastPhone);
     }
 
-    public static void printArithmeticalMean(ArrayList<Phone> phones) {
+   /*public static void printArithmeticalMean(ArrayList<Phone> phones) {
         Phone mean = phones.get(0);
        for (Phone p : phones) {
            mean.getDiagonal() = mean.getDiagonal() + p.getDiagonal();
        }
         System.out.println(mean.getDiagonal()/phones.size());
-    }
+    }*/
+
 
 }
 

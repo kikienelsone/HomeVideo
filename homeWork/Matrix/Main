@@ -1,0 +1,47 @@
+package matrix;
+
+public class Main {
+    public static void main(String[] args) {
+        Matrix matrix = new Matrix(3,3);
+       /* System.out.println(matrix.getRows());
+        System.out.println(matrix.getColumns());
+        System.out.println(matrix.getValueAt(0,1));*/
+
+        matrix.setValueAt(0, 0, 4);
+        matrix.setValueAt(0, 1, 7);
+        matrix.setValueAt(0, 2, 3);
+
+        matrix.setValueAt(1, 0, 2);
+        matrix.setValueAt(1, 0, 4);
+        matrix.setValueAt(1, 1, 7);
+
+        matrix.setValueAt(2, 0, 4);
+        matrix.setValueAt(2, 1, 7);
+        matrix.setValueAt(2, 2, 3);
+
+        Matrix matrix1 = new Matrix(3,3);
+
+        matrix1.setValueAt(0, 0, 4);
+        matrix1.setValueAt(0, 1, 7);
+        matrix1.setValueAt(0, 2, 3);
+
+        matrix1.setValueAt(1, 0, 2);
+        matrix1.setValueAt(1, 0, 4);
+        matrix1.setValueAt(1, 1, 7);
+
+        matrix1.setValueAt(2, 0, 4);
+        matrix1.setValueAt(2, 1, 7);
+        matrix1.setValueAt(2, 2, 3);
+
+
+        IMatrix sumOfBothMatrix = matrix.add(matrix1);
+        System.out.println(sumOfBothMatrix);
+
+        IMatrix transposeMatrix = matrix.transpose();
+        System.out.println(transposeMatrix);
+
+        IMatrix subMatrix = matrix.sub(matrix1);
+        System.out.println(subMatrix);
+    }
+
+}

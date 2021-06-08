@@ -1,0 +1,22 @@
+package interfaces1;
+
+public class Main {
+    public static void main(String[] args) {
+        FractionNumberImpl fraction = new FractionNumberImpl(1, 4);
+        FractionNumberImpl fraction1 = new FractionNumberImpl(2,5);
+
+        FractionNumberOperationImpl calculator = new FractionNumberOperationImpl();
+
+        FractionNumber resultAdd = calculator.add(fraction, fraction1);
+        System.out.println(resultAdd);
+
+        FractionNumber resultSub = calculator.sub(fraction, fraction1);
+        System.out.println(resultSub);
+
+        FractionNumber resultMul = calculator.mul(fraction, fraction1);
+        System.out.println(resultMul);
+
+        FractionNumber resultDiv = calculator.div(fraction, fraction1);
+        System.out.println(resultDiv);
+    }
+}

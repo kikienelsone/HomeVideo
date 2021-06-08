@@ -113,16 +113,13 @@ public class Matrix implements IMatrix {
     public IMatrix mul(IMatrix otherMatrix) throws IllegalArgumentException, NullPointerException { // умножение (колонка == строка)
         if (this.getColumns() == otherMatrix.getRows()) {
 
-
             Matrix mulMatrixResult = new Matrix(this.getColumns(), otherMatrix.getRows());
 
             for (int i = 0; i < mulMatrixResult.getRows(); i++) {
                 for (int j = 0; j < mulMatrixResult.getColumns(); j++) {
-                   
-
-
+                    for (int k = 0; k < mulMatrixResult.getColumns(); k++)
+                        mulMatrixResult.setValueAt(i, j, this.getValueAt(i,k) * otherMatrix.getValueAt(k,j));
                 }
-
             }
 
         } else {

@@ -176,6 +176,18 @@ public class Matrix implements IMatrix {
 
     @Override
     public boolean isSquareMatrix() {
+        Matrix squareMatrix = new Matrix(this.getRows(), this.getColumns());
+        for (int i = 0; i < squareMatrix.getRows(); i++) {
+            for (int j = 0; j < squareMatrix.getColumns(); j++) {
+                if (squareMatrix.getRows() == squareMatrix.getColumns()){
+                    return true;
+                }else {
+                    System.out.println("Matrix not square");
+                }
+            }
+        }
+
+
         return false;
     }
 
@@ -186,3 +198,4 @@ public class Matrix implements IMatrix {
 
 
 }
+

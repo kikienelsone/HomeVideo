@@ -1,0 +1,191 @@
+package matrix;
+
+import java.util.Arrays;
+
+public class Matrix implements IMatrix {
+    private double[][] matrix;
+
+    public Matrix(IMatrix add) {
+    }
+
+    public Matrix(int rows, int columns) {
+        matrix = new double[rows][columns];
+    }
+
+    @Override
+    public int getRows() {
+        return matrix.length;
+    }
+
+    @Override
+    public int getColumns() {
+        return matrix[0].length;
+    }
+
+    @Override
+    public double getValueAt(int rowIndex, int colIndex) throws IndexOutOfBoundsException {
+        if (rowIndex >= getRows()) {
+            System.out.println("большой индекс строки");
+            return -1;
+        }
+        if (colIndex >= getColumns()) {
+            System.out.println("большой индекс колонки");
+            return -1;
+        }
+
+        return matrix[rowIndex][colIndex];
+    }
+
+    @Override
+    public void setValueAt(int rowIndex, int colIndex, double value) throws IndexOutOfBoundsException {
+        if (rowIndex >= getRows()) {
+            System.out.println("большой индекс строки");
+            return;
+        }
+        if (colIndex >= getColumns()) {
+            System.out.println("большой индекс колонки");
+            return;
+        }
+        matrix[rowIndex][colIndex] = value;
+
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Matrix)) return false;
+        Matrix matrix1 = (Matrix) o;
+        return Arrays.equals(matrix, matrix1.matrix);
+    }
+
+    @Override
+    public int hashCode() {
+        return Arrays.hashCode(matrix);
+    }
+
+    @Override
+    public String toString() {
+        return Arrays.toString(matrix);
+    }
+
+    @Override
+    public IMatrix add(IMatrix otherMatrix) throws IllegalArgumentException, NullPointerException {
+        if (this.getColumns() == otherMatrix.getColumns() && this.getRows() == otherMatrix.getRows()) {
+
+            Matrix sumOfBothMatrix = new Matrix(otherMatrix.getRows(), otherMatrix.getColumns());
+
+            for (int i = 0; i < sumOfBothMatrix.getRows(); i++) {
+                for (int j = 0; j < sumOfBothMatrix.getColumns(); j++) {
+                    sumOfBothMatrix.setValueAt(i, j, this.getValueAt(i, j) + otherMatrix.getValueAt(i, j));
+                }
+            }
+            return sumOfBothMatrix;
+        } else {
+            System.out.println("These matrix not same");
+        }
+
+        return otherMatrix;
+    }
+
+    @Override
+    public IMatrix sub(IMatrix otherMatrix) throws IllegalArgumentException, NullPointerException {// вычитание
+        if (this.getRows() == otherMatrix.getRows() && this.getColumns() == otherMatrix.getColumns()) {
+
+            Matrix subOfBothMatrix = new Matrix(this.getRows(), this.getColumns());
+
+            for (int i = 0; i < subOfBothMatrix.getRows(); i++) {
+                for (int j = 0; j < subOfBothMatrix.getColumns(); j++) {
+                    subOfBothMatrix.setValueAt(i, j, this.getValueAt(i, j) - otherMatrix.getValueAt(i, j));
+                }
+
+            }
+            return subOfBothMatrix;
+        } else {
+            System.out.println("These matrix not same");
+        }
+
+
+        return otherMatrix;
+    }
+
+
+    @Override
+    public IMatrix mul(IMatrix otherMatrix) throws IllegalArgumentException, NullPointerException { // умножение (колонка == строка)
+        if (this.getColumns() == otherMatrix.getRows()) {
+
+
+            Matrix mulMatrixResult = new Matrix(this.getColumns(), otherMatrix.getRows());
+
+            for (int i = 0; i < mulMatrixResult.getRows(); i++) {
+                for (int j = 0; j < mulMatrixResult.getColumns(); j++) {
+                   
+
+
+                }
+
+            }
+
+        } else {
+            System.out.println("columns & rows don`t match");
+        }
+
+        return null;
+    }
+
+    @Override
+    public IMatrix mul(double value) {
+        return null;
+    }
+
+    @Override
+    public IMatrix transpose() {  // транспонирование(ХЗ ЧТО ЭТО) матрицы
+        Matrix transposeMatrix = new Matrix(this.getRows(), this.getColumns());
+        for (int i = 0; i < this.getRows(); i++) {
+            for (int j = 0; j < this.getColumns(); j++) {
+                transposeMatrix.setValueAt(j, i, this.getValueAt(i, j));
+            }
+        }
+        return transposeMatrix;
+    }
+
+    @Override
+    public void fillMatrix(double value) {
+
+    }
+
+    @Override
+    public double determinant() {
+
+        return 0;
+    }
+
+    @Override
+    public boolean isNullMatrix() {
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[0].length; j++) {
+                if (matrix[i][j] != 0.0) {
+                    return false;
+                }
+            }
+        }
+
+        return true;
+    }
+
+    @Override
+    public boolean isIdentityMatrix() {
+        return false;
+    }
+
+    @Override
+    public boolean isSquareMatrix() {
+        return false;
+    }
+
+    @Override
+    public void printToConsole() {
+
+    }
+
+
+}

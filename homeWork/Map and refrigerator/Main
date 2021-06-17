@@ -1,0 +1,20 @@
+package lesson14;
+
+public class Main {
+    public static void main(String[] args) {
+        Refrigerator refrigerator = new Refrigerator();
+        refrigerator.addProduct("apple", 5);
+        refrigerator.addProduct("pear", 3);
+        refrigerator.addProduct("plum", 2);
+        refrigerator.addProduct("apple", 7);
+        refrigerator.addProduct("pumpkin", 5);
+        refrigerator.addProduct("strawberries", 4);
+
+        refrigerator.printAllProducts();
+        refrigerator.getProduct("apple", 5);
+        refrigerator.printAllProducts();
+        refrigerator.smallestValueProducts();
+        refrigerator.sumOfAllProducts();
+
+    }
+}

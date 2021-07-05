@@ -1,0 +1,32 @@
+package lesson17;
+
+import java.io.*;
+import java.nio.channels.FileChannel;
+
+public class CopyByChannel implements FileCopyUtils {
+    @Override
+    public void copyFile(String source, String destination) throws FileCopyFailedException, FileAlreadyExistsException {
+        File descFile = new File(destination);
+        if (descFile.exists()) {
+            throw new FileAlreadyExistsException("file already exist");
+        }
+
+        FileChannel sourceChannel = null;
+        FileChannel destChannel = null;
+        try {
+            sourceChannel = new FileInputStream(source).getChannel();
+            destChannel = new FileOutputStream(destination).getChannel();
+            destChannel.transferFrom(sourceChannel, 0, sourceChannel.size());
+        } catch (Exception e) {
+            throw new FileCopyFailedException("some mistake");
+        } finally{
+            try {
+                destChannel.close();
+                sourceChannel.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        }
+    }
+}

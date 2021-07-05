@@ -1,0 +1,44 @@
+package lesson17;
+
+public class Main1 {
+    public static void main(String[] args) {
+
+       /* CopyByChannel copyByChannel = new CopyByChannel();*/
+        /*CopyByOneByte copyByOneByte = new CopyByOneByte();*/
+        /*CopyByStream copyByStream = new CopyByStream();*/
+
+                              
+      /*  long startTime3 = System.currentTimeMillis();
+
+        try {
+            copyByChannel.copyFile("C:\\\\java\\\\DSC_0667.jpg", "C:\\\\java\\\\DSC_0667-copy3.jpg");
+        } catch (FileCopyFailedException e) {
+            e.printStackTrace();
+        }
+        long endTime3 = System.currentTimeMillis();
+        System.out.println("time work of copyByChannel: "+(endTime3 - startTime3));*/
+
+      /*  long startTime2 = System.currentTimeMillis();
+
+        try {
+            copyByStream.copyFile("C:\\\\java\\\\DSC_0667.jpg",
+                    "C:\\\\java\\\\DSC_0667-copy2.jpg");
+        } catch (FileCopyFailedException e) {
+            e.printStackTrace();
+        }
+        long endTime2 = System.currentTimeMillis();
+        System.out.println("time work of copyByStream: "+(endTime2 - startTime2));*/
+
+
+  /*  long startTime1 = System.currentTimeMillis();
+        try {
+            copyByOneByte.copyFile("C:\\java\\DSC_0667.jpg",
+                                   "C:\\java\\DSC_0667-copy.jpg");
+        } catch (FileCopyFailedException e) {
+            e.printStackTrace();
+        }
+        long endTime1 = System.currentTimeMillis();
+        System.out.println("time work of copyByOneByte: "+(endTime1 - startTime1));
+    }*/
+    }
+}

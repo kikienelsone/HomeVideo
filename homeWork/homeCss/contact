@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+<div>
+    <h1 class="contact">Contacts</h1>
+</div>
+
+<div>
+    <a class = "tel" href="tel:+79622465713">+79622465713</a>
+    <a class = "mail" href="mailto:kikienelsone@gmail.com">kikienelsone@gmail.com</a>
+    <a class = "main" href="../index.html" >Main page</a>
+</div>
+
+<form action="">
+
+    <div>
+        <label>
+            <p class="input1">Text</p>
+            <input type="text" class="input" placeholder="text?)">
+        </label>
+    </div>
+    
+    <div>
+        <label>
+            <p class="comment">Comment</p>
+            <textarea id="" cols="30" rows="10" placeholder = "your Comment" class="textarea"></textarea>
+        </label>
+    
+        <div>
+            <input type="submit" value="submit">
+        </div>
+    </div>
+    
+    </form>
+
+</body>
+</html>

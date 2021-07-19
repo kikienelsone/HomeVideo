@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1 class="h1">Петроний Арбирт второй</h1>
+    </div>
+
+    <div> 
+        
+    <p class="text">Петроний кот, и назван в честь другого кота из книги "Дверь в лето" Хайнлайна. Примерно до 4 лет он жил в приюте, потом переехал ко мне. Все, что он делает это спит и ест))</p>
+
+</div>
+
+<div>
+    <a class = "contact" href="../Home/contact/index.html" target="_blank" >Contacts</a>
+</div>
+
+</body>
+</html>

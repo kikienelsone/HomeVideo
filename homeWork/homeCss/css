@@ -1,0 +1,56 @@
+.mail{
+    color: salmon;
+}
+
+.tel{
+    color: slateblue;
+}
+
+.main{
+    color: rgb(91, 117, 167);
+}
+
+.p{
+    color: violet;
+}
+
+.p1{
+    color: teal;
+}
+
+.title{
+    background-color: teal;
+}
+
+body{
+    background-color: black;
+}
+
+.text{
+    color: white;
+}
+
+.h1{
+    color: white;
+}
+
+.input{
+    
+    background-color: rgb(120, 133, 133);
+}
+
+.textarea{
+    background-color: rgb(120, 133, 133);
+}
+
+.contact{
+    color: rgb(207, 158, 158);
+}
+
+.input1{
+    color: white;
+}
+
+.comment{
+    color: white;
+}

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#9C27B0"
+        android:textSize="50sp"
+        tools:layout_editor_absoluteX="139dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <EditText
+        android:layout_width="198dp"
+        android:layout_height="49dp"
+        android:hint="enter your name"
+        android:inputType="textCapWords" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#9C27B0"
+        android:textSize="50sp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="67dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="enter your second name"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="57dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:layout_width="195dp"
+        android:layout_height="51dp"
+        android:hint="enter your birthday"
+        android:inputType="date"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="115dp" />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="187dp"
+        android:layout_height="70sp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="201dp"
+        android:text="GO"
+        android:textColor="#673AB7"
+        android:background="#FFCA8087"
+        tools:ignore="OnClick" />
+
+
+</android.support.constraint.ConstraintLayout>

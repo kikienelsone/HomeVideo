@@ -1,0 +1,6 @@
+
+let mc = prompt("");
+
+let res = +mc * 0.277778;
+
+console.log(res)

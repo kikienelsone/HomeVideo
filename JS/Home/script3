@@ -1,6 +1,5 @@
-
 let mc = prompt("");
 
-let res = +mc * 0.277778;
+let res = +mc / 1000 * 3600;
 
 console.log(res)

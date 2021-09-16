@@ -1,0 +1,30 @@
+let date = prompt()
+let splitDate = date.split(',')
+
+switch(splitDate[1]){
+    case "1" : console.log(+splitDate[0]+ " "+"января" + " " +splitDate[2]+" "+"года")
+    break
+    case "2" : console.log(+splitDate[0]+ " "+"февраля" + " " +splitDate[2]+" "+"года")
+    break
+    case "3" : console.log(+splitDate[0]+ " "+"матра" + " " +splitDate[2]+" "+"года")
+    break
+    case "4" : console.log(+splitDate[0]+ " "+"апреля" + " " +splitDate[2]+" "+"года")
+    break
+    case "5" : console.log(+splitDate[0]+ " "+"мая" + " " +splitDate[2]+" "+"года")
+    break
+    case "6" : console.log(+splitDate[0]+ " "+"июня" + " " +splitDate[2]+" "+"года")
+    break
+    case "7" : console.log(+splitDate[0]+ " "+"июля" + " " +splitDate[2]+" "+"года")
+    break
+    case "8" : console.log(+splitDate[0]+ " "+"августа" + " " +splitDate[2]+" "+"года")
+    break
+    case "9" : console.log(+splitDate[0]+ " "+"сенятбря" + " " +splitDate[2]+" "+"года")
+    break
+    case "10" : console.log(+splitDate[0]+ " "+"октября" + " " +splitDate[2]+" "+"года")
+    break
+    case "11" : console.log(+splitDate[0]+ " "+"ноября" + " " +splitDate[2]+" "+"года")
+    break
+    case "12" : console.log(+splitDate[0]+ " "+"декабря" + " " +splitDate[2]+" "+"года")
+    
+    default : console.log("введено неккоректное число")
+}

@@ -1,0 +1,7 @@
+let year = prompt()
+
+if(year % 4 == 0){
+    console.log("год високосный")
+}else{
+    console.log("год не високосный")
+}

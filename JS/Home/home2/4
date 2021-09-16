@@ -26,5 +26,5 @@ switch(splitDate[1]){
     break
     case "12" : console.log(+splitDate[0]+ " "+"декабря" + " " +splitDate[2]+" "+"года")
     
-    default : console.log("введено неккоректное число")
+    default : console.log("введено некорректное значение")
 }

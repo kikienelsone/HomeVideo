@@ -1,0 +1,8 @@
+let str = prompt()
+
+
+if(str = parseInt(str.match(/\d+/))){
+    console.log("есть цифры")
+}else{
+    console.log("нет цифр")
+}

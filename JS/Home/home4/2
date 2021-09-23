@@ -1,0 +1,16 @@
+function isNatural(num){
+  return (num ^ 0) === num
+}
+console.log(isNatural(6.8))
+
+
+function isDivisibleByThree(num){
+  return num % 3 == 0
+}
+console.log(isDivisibleByThree(999))
+
+
+function isOdd(num){
+  return num % 2 != 0
+}
+  console.log(isOdd(8))

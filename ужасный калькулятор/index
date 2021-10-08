@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+  
+
+
+    <input type="text" class="input1" >
+    <input type="text" class="input2" >
+
+        <div class="btn"></div>
+
+            <button class="btn-p" onclick="math = '+'">+</button>
+            <button class="btn-m" onclick="math = '*'">*</button>
+            <button class="btn-d" onclick="math = '/'">/</button>
+            <button class="btn-s" onclick="math = '-'">-</button>
+
+        </div>
+
+
+
+    <div class="res" ></div>
+    
+
+
+
+    <script src="../script/js.js"></script>
+</body>
+</html>

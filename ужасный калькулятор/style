@@ -1,0 +1,64 @@
+.input1{
+    width: 122px;
+    height: 30px;
+    border-radius: 20px;
+    border: solid 3px chartreuse;
+}
+
+.input2{
+    display: flex;
+    flex-direction: column;
+    width: 122px;
+    height: 30px;
+    border-radius: 20px;
+    margin-top: 10px;
+    border: solid 3px chartreuse;
+}
+
+.res{
+    margin-top: 10px;
+    width: 122px;
+    height: 30px;
+    border: solid 3px chartreuse;
+
+}
+
+.btn{
+    margin-top: 10px;
+}
+
+.btn-p{
+    width: 30px;
+    height: 30px;
+    border: solid 3px chartreuse;
+    border-radius: 50%;
+    color: red;
+    
+}
+
+.btn-m{
+    width: 30px;
+    height: 30px;
+    border: solid 3px chartreuse;
+    border-radius: 50%;
+    color: red;
+    
+}
+
+.btn-d{
+    width: 30px;
+    height: 30px;
+    border: solid 3px chartreuse;
+    border-radius: 50%;
+    color: red;
+    
+}
+
+.btn-s{
+    width: 30px;
+    height: 30px;
+    border: solid 3px chartreuse;
+    border-radius: 50%;
+    color: red;
+    
+}

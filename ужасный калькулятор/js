@@ -1,0 +1,43 @@
+let input1 = document.querySelector("input1")
+let input2 = document.querySelector("input2")
+
+
+let btn1 = document.querySelector("btn-p")
+let btn2 = document.querySelector("btn-m")
+let btn3 = document.querySelector("btn-d")
+let btn4 = document.querySelector("btn-s")
+
+function calc (){
+    let num1 = document.querySelector("input1").value
+    let num2 = document.querySelector("input2").value
+
+    let res
+
+    switch (math) {
+        case '+':
+            res = num1 + num2
+            break
+        case '*':
+            res = num1 * num2
+            break
+        case '/':
+            res = num1 / num2
+            break
+        case '-':
+            res = num1 - num2
+            break
+    }
+}
+
+btn1.addEventListener("click", () =>{
+    btn1.innerHTML = res
+})
+btn2.addEventListener("click", () =>{
+    btn2.innerHTML = res
+})
+btn3.addEventListener("click", () =>{
+    btn3.innerHTML = res
+})
+btn4.addEventListener("click", () =>{
+    btn4.innerHTML = res
+})

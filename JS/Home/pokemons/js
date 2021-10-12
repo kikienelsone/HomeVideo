@@ -1,0 +1,11 @@
+let body = document.querySelector("body")
+
+for(let i = 1; i < 12; i++){
+    fetch('https://pokeapi.co/api/v2/pokemon/${i}')
+        .then((response) => response.json())
+        .then((response) => {
+            let img = document.createElement("img")
+            img.src = response.sprites.back_default
+            body.append(img)
+        })
+}

@@ -1,0 +1,21 @@
+let button = document.querySelector("button")
+
+function calc(str){
+    let num
+    let res
+    num = document.getElementById("num").value
+        if(str = num.split('+')){
+            for (let i = 0; i < str; i++) {
+            res = i[0]+i[2]
+            
+            }
+        }return res
+ }   
+    
+    
+
+
+
+button.addEventListener("click", () =>{
+    calc()
+})

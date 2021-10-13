@@ -209,3 +209,15 @@ h2{
     width: 1437px;
     height: 960px;
 }
+
+.section-six{
+    width: 1437px;
+    height: 480px;
+    background: url(../img/section-six.jpg) no-repeat center center / contain;
+}
+
+.section-seven{
+    width: 1437px;
+    height: 800px;
+    background: url(../img/background-section-seven.jpg) no-repeat center center / contain;
+}

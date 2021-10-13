@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="main-section">
+        <div class="main-section-div"> 
+            <header>
+
+                <a href="#">
+                    <div class="logo"></div>
+                </a>
+
+                <nav>
+                    <ul class="main-sector-menu">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Services</a></li>
+                        <li><a href="">Blog</a></li>
+                    </ul>
+                </nav>
+
+                    <a href="">
+                        <button class="main-sector-btn">
+                        CONTACT US
+                        </button>
+                    </a>
+                
+            </header>
+
+            <div class="main-section-text">
+                <a href="#">
+                    <div class="logo__logo2"></div>
+                </a>
+
+                <h1>HELPING YOU THRIVE IN ALL AREAS OF LIFE</h1>
+
+                <p>Our highly talented therapists can help you with a range of issues including relationships, sex, PTSD, depression, social anxiety, or even just caring for yourself more.</p>
+
+                <button class="main-sector-btn2">
+                    WHO AM I
+                </button>
+
+            </div>
+
+        </div>
+
+    <section class="second-section">
+
+        <div class="second-section-blue">
+            <div>
+                <h2>Why Thrive?</h2>
+            </div>
+            
+            <div class="second-section-blue-text">
+                <p>Want to improve your well-being from the comfort of your own couch? Are you having trouble finding the right therapist?  Here at ThriveTalk, our licensed therapists provide the same quality care you would get in office from anywhere you can access your laptop or mobile phone. Become your best self with ThriveTalk.  Start therapy now with a licensed therapist!</p>
+            </div>
+            
+            
+        </div>
+    </section >
+
+    <section class="section-three">
+        <div>
+            <h3 class="section-three-title">ABOUT US</h3>
+        </div>
+
+        <div class="section-three-text">
+            <p>We want to help you thrive! Whether you are just looking for someone to talk to, or are struggling with a mental wellness issue we’re here to help.  Our highly talented therapists can help you with a range of issues including relationships, sex, PTSD, depression, social anxiety, or even just caring for yourself more.
+
+            </p>
+
+            <div class="section-three-text2">
+                <p>WE CAN HELP YOU WITH</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section-four">
+       
+    </section>
+
+    <section class="white-block">
+        
+    </section>
+
+    <section class="section-five">
+
+    </section>
+    
+</body>
+</html>

@@ -5,11 +5,11 @@ body{
 .main-section{
     width: 100%;
     height: 840px;
-    background: url("../img/background-main-selection.jpg") no-repeat center center / cover;
+    background: url("../img/main-background.jpg") no-repeat center center / cover;
 }
 
 .main-section-div{
-    width: 1130px;
+    width: 100%;
     margin: auto;
     padding: 28px 0 75px;
 }
@@ -22,9 +22,10 @@ header{
 }
 
 .logo{
+    margin-left: 97px;
     height: 27px;
     width: 107px;
-    background: url("../img/logo-main.svg") no-repeat center center / contain;
+    background: url("../img/Thrivetalk.png") no-repeat center center / contain;
 }
 
 a{
@@ -74,7 +75,7 @@ h1{
 
 .main-section-text{
     width: 530px;
-   
+    margin-left: 100px;
 
 }
 
@@ -107,15 +108,15 @@ h1{
 
 .logo__logo2{
     margin-bottom: 26px;
-    background: url(../img/logo-main.svg) no-repeat center center / contain;
+    background: url(../img/Thrivetalk.png) no-repeat center center / contain;
     height: 27px;
     width: 107px;
     margin-top: 150px;
 }
 
 .second-section{
-    background: url(../img/background-second-section.jpg)no-repeat center center / cover;
-    width: 1437px;
+    background: url(../img/blue-girl-background.jpg)no-repeat center right / contain;
+    width: 100%;
     height: 607px;
 }
 
@@ -158,7 +159,7 @@ h2{
 
 
 .section-three{
-    width: 1437px;
+    width: 100%;
     height: 361px;
 }
 
@@ -194,30 +195,375 @@ h2{
 }
 
 .section-four{
-    width: 1437px;
+    width: 100%;
     height: 360px;
-    background: url(../img/background-section-four.png) no-repeat center center / cover;
+    /* display: grid;
+    grid-template-rows: repeat(4fr); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.pic-rose{
+    width: 360px;
+    height: 360px;
+    background: url(../img/rose-block.jpg) no-repeat center center / cover;
+}
+
+.rose-block-text, .light-blue-block-text, 
+.blue-block-text{
+    color: #ffffff;
+    font-size: 32px;
+    margin-top: 95px;
+    margin-left: 72px;
+}
+
+.green-block-text{
+    width: 150px;
+    color: #ffffff;
+    font-size: 32px;
+    margin-top: 95px;
+    margin-left: 72px;
+}
+
+
+.pic-green{
+    width: 360px;
+    height: 360px;
+    background: url(../img/green-block.jpg)no-repeat center center / cover;
+}
+
+.pic-light-blue{
+    width: 360px;
+    height: 360px;
+    background: url(../img/light-blue-block.jpg)no-repeat center center / cover;
+}
+
+.pic-blue{
+    width: 360px;
+    height: 360px;
+    background: url(../img/blue-block.jpg)no-repeat center center / cover;
 }
 
 .white-block{
-    width: 1437px;
+    width: 100%;
     height: 100px;
 }
 
 .section-five{
-    background: url(../img/background-section-five.jpg) no-repeat center center / cover;
-    width: 1437px;
+    width: 100%;
     height: 960px;
+
 }
 
-.section-six{
-    width: 1437px;
+.blocks-one{
+    display: flex;
+}
+
+.physical-health-block{
+    width: 480px;
     height: 480px;
-    background: url(../img/section-six.jpg) no-repeat center center / contain;
+    background: url(../img/physical-health-block.jpg) no-repeat center center / contain;
+
+}
+
+.mental-health-block{
+    width: 480px;
+    height: 480px;
+    background: url(../img/mental-health-block.jpg) no-repeat center center / contain;
+    
+
+}
+
+.strawberries-block{
+    width: 480px;
+    height: 480px;
+    background: url(../img/strawberries-block.jpg) no-repeat center center / contain;
+    
+}
+
+.physical-health-text, .mental-health-text, .strawberries-text{
+    color: #ffffff;
+    width: 157px;
+    height: 72px;
+    font-size: 38px;
+    margin-left: 100px;
+    margin-top: 126px;
+}
+
+
+.blocks-two{
+    display: flex;
+}
+
+.gymnastics-block{
+    width: 480px;
+    height: 480px;
+    background: url(../img/gymnastics-block.jpg) no-repeat center center / contain;
+    
+}
+
+
+.crossfit-block{
+    width: 480px;
+    height: 480px;
+    background: url(../img/crossfit-block.jpg) no-repeat center center / contain;
+    
+}
+
+.aerobics-block{
+    width: 480px;
+    height: 480px;
+    background: url(../img/aerobics-block.jpg) no-repeat center center / contain;
+    
+}
+
+.gymnastics-block-text, .crossfit-block-text, .aerobics-block-text{
+    color: #ffffff;
+    width: 157px;
+    height: 72px;
+    font-size: 38px;
+    margin-left: 100px;
+    margin-top: 126px;
+}
+
+
+.setion-six{
+    width: 100%;
+    height: 480px;
+}
+
+.rectangle-white-part-one{
+    display: flex;
+    justify-content: center;
+}
+
+.white-rectangle-one, .white-rectangle-two, .white-rectangle-three{
+    width: 480px;
+    height: 240px;
+}
+
+.white-rectangle-two-text, .white-rectangle-one-text, .white-rectangle-three-text {
+    width: 298px;
+    height: 84px;
+    color: #22356F;
+    margin-left: 92px;
+}
+
+
+
+.white-rectangle-two-title, .white-rectangle-one-title, .white-rectangle-three-title{
+    width: 234px;
+    height: 36px;
+    color: #22356F;
+    margin-left: 90px;  
+    margin-top: 100px;
+}
+
+.rectangle-white-part-two{
+    display: flex;
+}
+
+.white-rectangle-four, .white-rectangle-five, .white-rectangle-six{
+    width: 480px;
+    height: 240px;
+}
+
+
+.white-rectangle-four-title, .white-rectangle-five-title, .white-rectangle-six-title{
+    width: 234px;
+    height: 36px;
+    color: #22356F;
+    margin-left: 90px;  
+    margin-top: 100px;
+}
+
+
+.white-rectangle-four-text, .white-rectangle-five-text, 
+.white-rectangle-six-text{
+    width: 298px;
+    height: 84px;
+    color: #22356F;
+    margin-left: 92px;
 }
 
 .section-seven{
-    width: 1437px;
+    width: 100%;
     height: 800px;
-    background: url(../img/background-section-seven.jpg) no-repeat center center / contain;
+    background: url(../img/man-and-white-rectangle-background.jpg) no-repeat center center / cover;
+}
+
+
+.you-know{
+    width: 217px;
+    height: 20px;
+    font-size: 15px;
+    margin-left: 570px;
+
+}
+
+.you-know-text{
+    padding-top: 100px;
+    color: #22356F;
+}
+
+
+
+.big-seven{
+    width: 676px;
+    height: 215px;
+    margin-left: 568px;
+    margin-top: 342px;
+    font-size: 36px;
+    color: #22356F;
+}
+
+
+.get-help-orange{
+    color: #FAB63E;
+    margin-top: 165px;
+    margin-left: 574px;
+    font-size: 16px;
+}
+
+
+
+.section-eigth{
+    width: 100%;
+    height: 600px;
+    background: url(../img/black-smail-background.jpg) no-repeat center center / cover;
+}
+
+
+.section-eigth-contact{
+    width: 108px;
+    height: 14px;
+    margin-left: 177px;
+    padding-top: 100px;
+    color: #ffffff;
+}
+
+
+.smile-title{
+    width: 704px;
+    height: 40px;
+    margin-top: 143px;
+    font-size: 64px;
+    color: #ffffff;
+    margin-left: 175px;
+
+}
+
+
+.smile-text{
+    width: 519px;
+    height: 149px;
+    color: #FFFFFF;
+    font-size: 36px;
+    margin-left: 175px;
+}
+
+.section-eigth-get-help{
+    color: #62D0DF;
+    margin-top: 50px;
+    margin-left: 176px;
+    font-size: 16px;
+}
+
+.footer-background{
+    display: flex;
+    width: 100%;
+    height: 380px;
+    background: url(../img/footer-background.jpg) no-repeat center center / cover;
+}
+
+.footer-first-content{
+    width: 207px;
+    height: 115px;
+    margin-left: 660px;
+
+}
+
+.footer-some-info{
+    margin-top: 80px;
+    padding-bottom: 50px;
+    color: #22356F;
+}
+
+.footer-some-info-text{
+    line-height: 30px;
+    font-size: 14px;
+    color: #5065a5;
+}
+
+
+.footer-second-content{
+    width: 207px;
+    height: 115px;
+    margin-left: 58px;
+    margin-top: 58px;
+}
+
+
+.footer-enfold{
+    margin-top: 23px;
+    padding-bottom: 50px;
+    color: #22356F;
+}
+
+.footer-enfold-text{
+    line-height: 30px;
+    font-size: 14px;
+    color: #5065a5;
+
+}
+
+.contact-footer{
+    margin-top: 25px;
+    line-height: 30px;
+}
+
+.tel{
+    color: #5065a5;
+}
+
+.mail{
+    color: #006DFF;
+}
+
+.footer-third-content{
+    width: 207px;
+    height: 115px;
+    margin-left: 60px;
+}
+
+
+.footer-office-hours{
+    margin-top: 80px;
+    padding-bottom: 50px;
+    color: #22356F;
+}
+
+.footer-office-hours-text{
+    color:#5065a5;
+}
+
+
+.footer-rectangle{
+    display: flex;
+    width: 100%;
+    height: 80px;
+    background-color: #62D0DF;
+}
+
+.copy{
+    margin-left: 199px;
+    margin-top: 28px;
+    color: #ffffff;
+
+}
+.copy-text{
+    margin-top: -20px;
+    margin-left: 20px;
 }

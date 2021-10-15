@@ -83,16 +83,226 @@
 
 
     <section class="section-four">
-       
+
+       <div class="pic-rose">
+
+           <div class="rose-block-text">
+               <p>Weight Lifting</p>
+           </div>
+       </div>
+
+       <div class="pic-green">
+
+        <div class="green-block-text">
+            <p>Running  & Spinning</p>
+        </div>
+
+       </div>
+
+       <div class="pic-light-blue">
+
+        <div class="light-blue-block-text">
+            <p>Pumping Iron</p>
+        </div>
+
+       </div>
+
+       <div class="pic-blue">
+
+        <div class="blue-block-text">
+            <p>Pumping Iron</p>
+        </div>
+
+       </div>
+
     </section>
 
     <section class="white-block">
         
     </section>
 
-    <section class="section-five">
+    <section class="section-five">        
+        
+        
+        <div class="blocks-one">            
+            <div class="physical-health-block">
+                <p class="physical-health-text">Physical Health</p>
+            </div>            
+            <div class="mental-health-block">
+                <p class="mental-health-text">Mental Health</p>
+            </div>
+            <div class="strawberries-block">
+                <p class="strawberries-text">Nutrition</p>
+            </div>
+
+
+        </div>
+
+        <div class="blocks-two">
+
+            <div class="gymnastics-block">
+                <p class="gymnastics-block-text">Gymnastics</p>
+            </div>       
+
+            <div class="crossfit-block">
+                <p class="crossfit-block-text">Crossfit</p>
+            </div>
+
+            <div class="aerobics-block">
+                <p class="aerobics-block-text">Aerobics</p>
+            </div>
+
+            
+        </div>
+
+
 
     </section>
+    
+
+
+    <section>
+        <div class="setion-six">
+            <div class="rectangle-white-part-one">
+
+                <div class="white-rectangle-one">
+                    <h3 class="white-rectangle-one-title">Nutritional Plans</h3>
+                    <p class="white-rectangle-one-text">
+                        Nutritional Facts on some shitty things that you don’t care about and even we don’t , I need to replace this copy.
+                    </p>
+                </div>
+
+                <div class="white-rectangle-two">
+                    <h3 class="white-rectangle-two-title">Weight Loss</h3>
+                    <p class="white-rectangle-two-text">
+                        Nutritional Facts on some shitty things that you don’t care about and even we don’t , I need to replace this copy.
+                    </p>
+                </div>
+
+                <div class="white-rectangle-three">
+                    <h3 class="white-rectangle-three-title">Mental Peace</h3>
+                    <p class="white-rectangle-three-text">
+                        Nutritional Facts on some shitty things that you don’t care about and even we don’t , I need to replace this copy.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="rectangle-white-part-two">
+
+                <div class="white-rectangle-four">
+
+                    <h3 class="white-rectangle-four-title">Home Training</h3>
+
+                    <p class="white-rectangle-four-text">
+                        Nutritional Facts on some shitty things that you don’t care about and even we don’t , I need to replace this copy.
+                    </p>
+
+                </div>
+
+                <div class="white-rectangle-five">
+                    
+                    <h3 class="white-rectangle-five-title">Work/Life Balance</h3>
+
+                    <p class="white-rectangle-five-text">
+                        Nutritional Facts on some shitty things that you don’t care about and even we don’t , I need to replace this copy.
+                    </p>
+                </div>
+
+                <div class="white-rectangle-six">
+                    <h3 class="white-rectangle-six-title">Cardio</h3>
+
+                    <p class="white-rectangle-six-text">
+                        Nutritional Facts on some shitty things that you don’t care about and even we don’t , I need to replace this copy.
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section>
+        <div class="section-seven">
+            <div class="you-know">
+                <p class="you-know-text">YOU SHOULD ALSO KNOW</p>
+            </div>
+
+            <div class="big-seven">
+                <p class="big-seven-text">MDD affects more than 16.1 million American adults, or about 6.7%of the U.S. population age 18 and older in a given year. We at ThriveTalk can help you.</p>
+            </div>
+
+            <a href="#">
+                <div class="get-help-orange">GET HELP NOW</div>
+            </a>
+
+        </div>
+    </section>
+
+
+    <section>
+        <div class="section-eigth">
+
+            <div>
+                <a href="#">
+                    <div class="section-eigth-contact">CONTACT US</div>
+                </a>
+                
+                <h3 class="smile-title">Ready. Set. Smile</h3>
+
+                <p class="smile-text">Take the free online assessment to see if you are a candidate and get started on your journey.</p>
+
+                <a href="#">
+                    <div class="section-eigth-get-help">GET HELP NOW</div>
+
+
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer-background">
+
+            <div class="footer-first-content">
+                <h3 class="footer-some-info">SOME INFO</h3>
+                <p class="footer-some-info-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula.</p>
+            </div>
+
+            <div class="footer-second-content">
+                <h3 class="footer-enfold">ENFOLD HEALTH</h3>
+                <p class="footer-enfold-text">Main Street 1, Olcott Buffalo, United States</p>
+
+                <div class="contact-footer">
+                <a class="tel" href="tel:+555 283 784 333 ">+555 283 784 333</a>
+
+                <a class="mail" href="mailto:office@enfold-health.com">office@enfold-health.com</a>
+
+                </div>
+
+            </div>
+
+            <div class="footer-third-content">
+                <h3 class="footer-office-hours">OFFICE HOURS</h3>
+                <p class="footer-office-hours-text">
+                    Mo-Fr: 8:00-19:00
+                    Sa: 8:00-14:00
+                    Su: closed</p>
+
+                
+            </div>
+        </div>
+
+        <div class="footer-rectangle">
+            <div class="copy">
+                &copy;
+                <p class="copy-text">Copyright - ThriveTalk 2017</p>
+            </div>
+        </div>
+    </footer>
     
 </body>
 </html>

@@ -1,0 +1,53 @@
+function App(){ 
+
+  const[addTask, addSetTask] = useState([])
+  
+  const [task, setTask] = useState("")
+
+  function changeTask(item){
+    setTask(item.target.value)
+  }
+
+  function res(){
+
+      const taskCopy = [...addTask]
+      taskCopy.push(task)
+      addSetTask(taskCopy)
+      
+}
+
+function res2(){
+
+  addSetTask(
+    task.slice(addTask))
+    
+}
+
+  
+
+  return(
+
+    <div>
+
+    <input onChange = {(item) => changeTask(item)} type="text"></input>
+
+    <button onClick = {() => res()}>add task</button>
+
+    <button onClick = {() => res2()}>remove task</button>
+    
+    
+      <div>
+        {addTask.localeCompare((item) => {
+          return (
+            <p>{item}</p>
+          )
+        })}
+      </div>
+      
+
+    </div>
+  )
+
+}
+
+export default App;

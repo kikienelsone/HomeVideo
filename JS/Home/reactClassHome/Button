@@ -1,0 +1,33 @@
+import React, {Component} from "react";
+
+
+class Button extends Component{
+
+    constructor(props){
+        super(props);
+    }
+
+
+
+
+
+
+    render(){
+        return(
+
+            <div>
+            <button value={this.props.value} onClick={(event)=>this.props.clickAdd}>add</button>
+            <button value={this.props.value} onClick={(event)=>this.props.clickMult}>mult</button>
+            <button value={this.props.value} onClick={(event)=>this.props.clickDiv}>add</button>
+            <button value={this.props.value} onClick={(event)=>this.props.clickSub}>mult</button>
+            </div>
+        );
+    }
+
+}
+
+
+
+
+
+export default Button;

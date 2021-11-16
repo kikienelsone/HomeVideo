@@ -1,0 +1,68 @@
+import React from 'react';
+import Input from './components/Input/Input';
+import Button from './components/Button/Button';
+
+class App extends React.Component{
+
+
+state = {
+
+  inputOne: "",
+  inputTwo: "",
+  res: ""
+}
+
+clickAdd = () => {
+  this.setState({res: +this.state.inputOne + +this.state.inputTwo})
+}
+
+clickMult = () =>{
+  this.setState({res: +this.state.inputOne * +this.state.inputTwo})
+}
+clickDiv = () => {
+  this.setState({res: +this.state.inputOne / +this.state.inputTwo})
+}
+
+clickSub = () =>{
+  this.setState({res: +this.state.inputOne - +this.state.inputTwo})
+}
+
+setState = this.setState.bind(this)
+
+  render(){
+    console.log(this.setState)
+    return(
+      <div>
+
+          
+        <p>number1</p> 
+
+        <Input value={this.state.inputOne} keyState="inputOne" setState={this.setState}/>
+        
+
+        <p>number2</p>
+
+        <Input value={this.state.inputTwo} keyState="inputTwo" setState={this.setState}/>
+
+        
+        
+
+        {/* <input value={this.state.inputTwo} onChange={(event)=> this.setState({inputTwo: event.target.value})}  type="text"></input> */}
+
+        <Button />
+        
+
+        {/* <button onClick={this.clickAdd}>add</button>
+        <button onClick={this.clickMult}>mult</button>
+        <button onClick={this.clickDiv}>div</button>
+        <button onClick={this.clickSub}>sub</button> */}
+
+
+        <div>{this.state.res}</div>
+        
+      </div>
+    )
+  }
+}
+
+export default App;

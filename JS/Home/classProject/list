@@ -1,0 +1,119 @@
+let ul = document.querySelector(".ul")
+let list2 = document.querySelector(".list2")
+let li = document.createElement("li")
+let button = document.createElement("button")
+let p = document.createElement("p")
+let form = document.createElement("form")
+let input1 = document.createElement("input")
+let input2 = document.createElement("input")
+let formButton = document.createElement("button")
+let formDiv = document.querySelector(".form-div")
+let add = document.querySelector(".add")
+li.setAttribute("draggable", true)
+
+function createElement(arr) {
+
+    for (let item of arr){
+        console.log(item.name)
+        console.log(item.description)
+        li.innerHTML = item.name
+        li.appendChild(p).innerHTML = item.description
+        li.appendChild(button).innerHTML = "delete"
+
+        button.addEventListener("click", () =>{
+            li.remove(li)
+        })
+    }
+}
+
+function addElements() {
+
+    add.addEventListener("click", () =>{
+        formDiv.appendChild(form)
+        form.appendChild(input1)
+        form.appendChild(input2)
+        formDiv.appendChild(formButton)
+        add.style.visibility = "hidden"
+    })
+
+    formButton.addEventListener("click", () => {
+
+        let addList = document.createElement("li")
+        let newPar = document.createElement("p")
+        let delButton = document.createElement("button")
+        delButton.innerHTML = "delete"
+
+        // addList.setAttribute("draggable", true)
+        ul.appendChild(addList)
+
+        addList.innerHTML = input1.value
+        addList.appendChild(newPar)
+        newPar.innerHTML = input2.value
+        addList.setAttribute("draggable", true)
+
+        addList.appendChild(delButton)
+
+        delButton.addEventListener("click", () =>{
+            addList.remove(addList)
+
+        })
+    })
+
+}
+input2.style.marginTop = "10px"
+formButton.innerHTML = "save"
+
+fetch("list.json").then(async res =>{
+    ul.appendChild(li)
+
+    let data = await res.json()
+    createElement(data)
+
+    formDiv.style.visibility = "hidden"
+    add.style.visibility = "visible"
+
+    add.addEventListener("click", () =>{
+        formDiv.style.visibility = "visible"
+
+    })
+    ul.ondradstart = drag
+
+})
+addElements()
+
+
+fetch("list2.json").then(async res =>{
+    list2.appendChild(li)
+
+    let data = await res.json()
+    createElement(data)
+    // addElements()
+
+    formDiv.style.visibility = "hidden"
+    add.style.visibility = "visible"
+
+    add.addEventListener("click", () =>{
+        formDiv.style.visibility = "visible"
+
+    })
+    list2.ondradstart = drag
+
+})
+ul.ondragover = dragNdrop
+list2.ondragover = dragNdrop
+
+ul.ondrop = drop
+list2.ondrop = drop
+
+function dragNdrop (event) {
+    event.preventDefault()
+}
+
+function drag(event) {
+    event.dataTransfer.setData("tagName", event.target.tagName)
+}
+
+function drop(event) {
+    event.dataTransfer.getData("tagName")
+    event.target.appendChild(document.querySelector("li"))
+}
